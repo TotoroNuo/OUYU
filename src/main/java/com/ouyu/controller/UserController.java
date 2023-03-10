@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  * @author a1315
  */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/user/")
 @CrossOrigin
 public class UserController {
     private static final int TWO = 2;
