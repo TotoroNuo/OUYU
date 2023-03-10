@@ -1,0 +1,35 @@
+server:
+  port: 3000
+spring:
+ application:
+#应用的名称
+    name: OUYU
+
+ datasource:
+  druid:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ouyu?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置mybatis
+mybatis:
+  #标注待解析的mapper的xml文件位置
+  mapper-locations: classpath:com/ouyu/mapper/*.xml
+  #标注实体类位置
+  type-aliases-package: com.ouyu.entity
+  configuration:
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
+
+
+
+
+
+
