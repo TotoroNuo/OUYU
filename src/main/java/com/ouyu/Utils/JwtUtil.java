@@ -45,7 +45,7 @@ public class JwtUtil {
     /**
      * 检查token是否有效
      */
-    public static boolean checkToken(String userName, String userPassword, String token) {
+    public static boolean checkToken( String token) {
         if (token == null) {
             return false;
         }

@@ -1,5 +1,6 @@
 package com.ouyu.controller.interceptor;
 
+import com.ouyu.Utils.JwtUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,7 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 public class SpringMvcInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return HandlerInterceptor.super.preHandle(request, response, handler);
+        String token = request.getHeader("token");
+        return JwtUtil.checkToken(token);
     }
 
     @Override
