@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 /**
  * @author a1315
+ * 功能：配置SpringMVC拦截器路径
  */
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {

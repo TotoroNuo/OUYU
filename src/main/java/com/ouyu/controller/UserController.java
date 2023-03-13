@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
  */
 @RestController
 @RequestMapping("/api/user/")
-@CrossOrigin
 public class UserController {
     private static final int TWO = 2;
     private static final String SEX = "先生";
